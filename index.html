@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação de Código</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 14px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+    footer span {
+        margin: 0 15px;
+    }
+
+  </style>
+</head>
+<body>
+    <h5>É preciso amar as pessoas</h5>
+  <h1>Para pra pensar...</h1>
+  <input type="text" id="codeInput" placeholder="Digite o código aqui">
+  <button onclick="checkCode()">Enviar</button>
+ 
+
+  <script>
+    function checkCode() {
+      const code = document.getElementById('codeInput').value.trim(); // Pega o valor do input e remove espaços extras
+      
+      // Lista de códigos válidos e suas respectivas páginas
+      const validCodes = {
+        "Dorme": "pagina1.html",
+        "Santo": "pagina2.html",
+        "Areia": "pagina3.html"
+      };
+
+      if (validCodes[code]) {
+        // Redireciona para a página correspondente
+        window.location.href = validCodes[code];
+      } else {
+        alert("Pouco QI. Pense de novo");
+      }
+    }
+  </script>
+
+  <footer>
+    <span>211</span>
+    <span>417</span>
+    <span>925</span>
+  </footer>
+  
+</body>
+
+</html>
