@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Verificação de Código</title>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -39,6 +40,12 @@
         margin: 0 15px;
     }
 
+    #clock {
+        font-size: 30px;
+        color: #333;
+        margin-top: 20px;
+    }
+
   </style>
 </head>
 <body>
@@ -46,6 +53,7 @@
   <h1>Para pra pensar...</h1>
   <input type="text" id="codeInput" placeholder="Digite o código aqui">
   <button onclick="checkCode()">Enviar</button>
+  <div id="clock"></div>
  
 
   <script>
@@ -66,6 +74,20 @@
         alert("Pouco QI. Pense de novo");
       }
     }
+
+    function updateClock(){
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2,'0');
+        const minutes = now.getMinutes().toString().padStart(2,'0');
+        const seconds = now.getSeconds().toString().padStart(2,'0');
+
+        const timeString = `${hours}:${minutes}:${seconds}`;
+
+        document.getElementById('clock').textContent = timeString;
+    }
+    setInterval(updateClock, 1000);
+
+    updateClock();
   </script>
 
   <footer>
