@@ -52,6 +52,7 @@
 </head>
 <body>
     <h5>É preciso amar as pessoas</h5>
+    <h6>ESTROFES são as pioneiras, a cada LINHA que escrevemos, nossas PALAVRAS são marcadas</h6>
   <h1>Para pra pensar...</h1>
   <input type="text" id="codeInput" placeholder="Digite o código aqui">
   <button onclick="checkCode()">Enviar</button>
@@ -78,19 +79,7 @@
       }
     }
 
-    function updateClock(){
-        const now = new Date();
-        const hours = now.getHours().toString().padStart(2,'0');
-        const minutes = now.getMinutes().toString().padStart(2,'0');
-        const seconds = now.getSeconds().toString().padStart(2,'0');
-
-        const timeString = `${hours}:${minutes}:${seconds}`;
-
-        document.getElementById('clock').textContent = timeString;
-    }
-    setInterval(updateClock, 1000);
-
-    updateClock();
+   
   </script>
 
   <footer>
